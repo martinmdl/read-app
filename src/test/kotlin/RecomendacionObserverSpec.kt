@@ -1,7 +1,6 @@
 @file:Suppress("SpellCheckingInspection")
 
-package ar.edu.unsam.algo2.readapp
-
+import ar.edu.unsam.algo2.readapp.*
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.DescribeSpec
@@ -46,12 +45,14 @@ class RecomendacionObserverSpec: DescribeSpec({
             recomendacion.agregarALibrosDeRecomendacion(usuario2, libro2)
 
             verify (exactly = 1) {
-                mockMailSender.sendMail(Mail(
+                mockMailSender.sendMail(
+                    Mail(
                     from = "notificaciones@readapp.com.ar",
                     to = recomendacion.creador.direccionEmail,
                     subject = "Se agregó un Libro",
                     content = "El usuario: ${usuario2.nombre} agrego el Libro ${libro2.getNombre()} a la recomendación que tenía estos Títulos: Pipo 1"
-                ))
+                )
+                )
             }
         }
 

@@ -1,7 +1,6 @@
 @file:Suppress("SpellCheckingInspection")
 
-package ar.edu.unsam.algo2.readapp
-
+import ar.edu.unsam.algo2.readapp.*
 import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
@@ -170,12 +169,14 @@ class ProcesosAdministracionSpec : DescribeSpec ({
             command.ejecutar(adm)
 
             verify (exactly = 1) {
-                mockMailSender.sendMail(Mail(
+                mockMailSender.sendMail(
+                    Mail(
                     from = "System@not.com",
                     to = "admin@readapp.com.ar",
                     subject = "Se ejecuto un proceso",
                     content = "Se realizó el proceso: BorrarUsuarioActivo"
-                ))
+                )
+                )
             }
         }
 
@@ -189,12 +190,14 @@ class ProcesosAdministracionSpec : DescribeSpec ({
             command.ejecutar(adm)
 
             verify (exactly = 1) {
-                mockMailSender.sendMail(Mail(
+                mockMailSender.sendMail(
+                    Mail(
                     from = "System@not.com",
                     to = "admin@readapp.com.ar",
                     subject = "Se ejecuto un proceso",
                     content = "Se realizó el proceso: ActualizacionDeLibro"
-                ))
+                )
+                )
             }
         }
 
@@ -205,12 +208,14 @@ class ProcesosAdministracionSpec : DescribeSpec ({
             command.ejecutar(adm)
 
             verify (exactly = 1) {
-                mockMailSender.sendMail(Mail(
+                mockMailSender.sendMail(
+                    Mail(
                     from = "System@not.com",
                     to = "admin@readapp.com.ar",
                     subject = "Se ejecuto un proceso",
                     content = "Se realizó el proceso: BorrarCentroDeLecturaExpirados"
-                ))
+                )
+                )
             }
         }
 
@@ -222,12 +227,14 @@ class ProcesosAdministracionSpec : DescribeSpec ({
             command.ejecutar(adm)
 
             verify (exactly = 1) {
-                mockMailSender.sendMail(Mail(
+                mockMailSender.sendMail(
+                    Mail(
                     from = "System@not.com",
                     to = "admin@readapp.com.ar",
                     subject = "Se ejecuto un proceso",
                     content = "Se realizó el proceso: AgregarAutores"
-                ))
+                )
+                )
             }
         }
     }

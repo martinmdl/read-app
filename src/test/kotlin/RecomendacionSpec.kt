@@ -1,13 +1,9 @@
 @file:Suppress("SpellCheckingInspection")
 
-package ar.edu.unsam.algo2.readapp
-
+import ar.edu.unsam.algo2.readapp.*
 import io.kotest.assertions.throwables.shouldThrow
-import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
-import io.mockk.every
-import io.mockk.mockk
 import java.time.LocalDate
 
 class RecomendacionesSpec : DescribeSpec({

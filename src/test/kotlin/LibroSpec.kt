@@ -1,7 +1,8 @@
 @file:Suppress("SpellCheckingInspection")
 
-package ar.edu.unsam.algo2.readapp
-
+import ar.edu.unsam.algo2.readapp.Autor
+import ar.edu.unsam.algo2.readapp.Lenguaje
+import ar.edu.unsam.algo2.readapp.Libro
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
 import java.time.LocalDate
